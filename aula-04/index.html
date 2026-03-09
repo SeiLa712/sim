@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+  </head>
+
+  <body>
+    <h1>Formulários - tipos de input</h1>
+
+    <!-- Input - coleta informações do usuário -->
+    <!-- <input type="text" -->
+
+    <!-- form = tag que engloba os campos de um formulário -->
+
+    <form action="" method="">
+      <!-- fieldset - segmenta o formulário em áreas -->
+
+      <fieldset>
+        <!-- legend - legenda para aquele trecho do formulário -->
+        <legend>Dados Pessoais</legend>
+
+        <!-- forma 1 - label depois input -->
+        <!-- label = texto para guiar o input -->
+        <!-- for = diz para qual input ele vai servir -->
+        <label for="Campo-Nome">Nome:</label>
+
+        <!-- id = identificador única daquele elemento -->
+        <!-- name = usado para identificar o input quando enviar os dados -->
+        <input
+          type="text"
+          id="Campo-Nome"
+          name="Campo-Nome"
+          placeholder="Digite seu nome completo"
+          required
+        />
+
+        <br />
+        <br />
+
+        <!-- forma 2 - input dentro do label -->
+        <label>
+          E-mail:
+          <input
+            type="email"
+            id="Campo-E-mail"
+            name="Campo-E-mail"
+            placeholder="email@email.com"
+            required
+          />
+        </label>
+
+        <br />
+        <br />
+
+        <!-- Caixa de senha -->
+        <label for="Campo-Senha">Senha: </label>
+        <input
+          type="password"
+          name="Campo-Senha"
+          id="Campo-Senha"
+          placeholder="Digite sua senha"
+          required
+        />
+
+        <br />
+        <br />
+
+        <!-- Caixa botão -->
+        <input
+          type="submit"
+          name="Campo-Botao"
+          id="Campo-Botao"
+          value="Enviar"
+        />
+      </fieldset>
+    </form>
+
+    <!-- OUTROS INPUTS alguma hora se vai usar -->
+
+    <!-- Data -->
+    <!-- Só data -->
+    <label for="input-data"> Data </label>
+    <input type="date" name="input-data" id="input-data" />
+    <!-- Data e hora -->
+    <input type="datetime-local" name="" id="" />
+    <!-- Só hora -->
+    <input type="time" name="" id="" />
+
+    <h2>Telefone</h2>
+    <!-- Telefone -->
+    <input
+      type="tel"
+      pattern="[0-9]{3}--[0-9]{5}--[0-9]{4}"
+      placeholder="(99)99999-9999"
+      required
+    />
+
+    <!-- Números -->
+    <h2>Números</h2>
+    <input type="number" name="" id="" min="-50" max="100" value="5" />
+
+    <br /><br />
+    <!-- Barrinha -->
+    <label for="">Barra:</label>
+    0
+    <input type="range" min="0" max="100" value="50" step="5" />
+    100
+
+    <!-- Texto grande -->
+    <h2>Caixa de texto grande</h2>
+    <textarea name="" id="" placeholder="Biografia..."></textarea>
+
+    <!-- Cores -->
+    <h2>Seletor de cor</h2>
+    <input type="color" />
+
+    <!-- Caixa de seleção -->
+    <h3>Seleção</h3>
+
+    <!-- Bolinha -->
+    <label for="">Selecione seu Curso: </label>
+    <br />
+    <input type="radio" name="cursoEscolhido" value="Engenharia de Software" />
+    Engenharia de Software
+    <br />
+    <input type="radio" name="cursoEscolhido" value="Ciência da Computação" />
+    Ciência da Computação
+    <br />
+    <input type="radio" name="cursoEscolhido" value="Sistemas de Informação" />
+    Sistemas de Informação
+    <br />
+
+    <!-- Caixinha - usado para selecionar várias opções -->
+    <label for="">Selecione quais redes você utiliza: </label>
+    <br />
+    <input type="checkbox" name="rede1" value="Tiktok" /> Tiktok
+    <br />
+    <input type="checkbox" name="rede2" value="Instagram" /> Instagram
+    <br />
+    <input type="checkbox" name="rede3" value="Youtube" /> Youtube
+    <br />
+    <input type="checkbox" name="rede4" value="Facebook" /> Facebook
+
+    <br /><br />
+
+    <!-- Caixa de seleção -->
+    <label for="">Selecione seu Estado: </label>
+    <select name="" id="">
+      <option value="São Paulo">São Paulo</option>
+      <option value="Rio de Janeiro">Rio de Janeiro</option>
+      <option value="Belo Horizonte">Belo Horizonte</option>
+      <option value="Curitiba">Curitiba</option>
+      <option value="Porto Alegre">Porto Alegre</option>
+      <option value="Florianópolis">Florianópolis</option>
+      <option value="Salvador">Salvador</option>
+      <option value="Fortaleza">Fortaleza</option>
+      <option value="Recife">Recife</option>
+      <option value="Manaus">Manaus</option>
+      <option value="Brasília">Brasília</option>
+      <option value="Goiânia">Goiânia</option>
+      <option value="Belém">Belém</option>
+      <option value="São Luís">São Luís</option>
+      <option value="João Pessoa">João Pessoa</option>
+      <option value="Campo Grande">Campo Grande</option>
+      <option value="Espírito Santo">Espírito Santo</option>
+    </select>
+
+    <!-- Grupo de opções -->
+    <optgroup name="ES" value="ES" label="Espírito Santo">
+      <option value="Vitória">Vitória</option>
+      <option value="Vila Velha">Vila Velha</option>
+      <option value="Serra">Serra</option>
+      <option value="Cariacica">Cariacica</option>
+    </optgroup>
+
+    <!-- Reset -->
+    <input type="reset" value="Resetar" />
+  </body>
+</html>
