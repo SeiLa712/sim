@@ -28,7 +28,7 @@ a{
 .container{
     width: 90%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 
 /* Topo do site */
@@ -168,18 +168,199 @@ a{
     margin-bottom: 10px;
 }
 
+/* Seções */
 
+.secao{
+    padding: 30px 0 50px 0;
 
+}
 
+.titulo-secao{
+    margin-bottom: 25px;
+}
 
+.titulo-secao h2{
+    font-size: 2em;
+    color: #111837;
+    margin-bottom: 8px;
+}
 
+.titulo-secao p{
+    color: #4b5563;
 
+}
 
+/* Block */
 
+.bloco-historia{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px lightcoral;
+}
 
+.caixa-block{
+    display: block;
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    color: #7f1d1d;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+/* Inline e Inline-Block */
 
+.linha-exemplo, .linha-card-inlineblock{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 10px black;
+}
 
+.linha-exemplo{
+    margin-bottom: 20px;
+}
 
+.texto-exemplo{
+    font-size: 1em;
+}
 
+.item-inline{
+    display: inline;
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 8px;
+    font-weight: 700;
+}
 
+/* Cards azuis */
+.card-inlineblock{
+    display: inline-block;
+    width: 28%;
+    min-height: 190px;
+    margin-right: 2%;
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    border-radius: 15px;
+    padding: 20px;
+}
 
+.card-inlineblock h3{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-inlineblock p{
+    font-size: 0.7em;
+    line-height: 1.5;
+}
+
+/* Display Flex */
+
+.lista-carreira{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-carreira{
+    flex: 1 1 260px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px lightcoral;
+}
+
+.card-carreira img{
+    border-radius: 20px;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-carreira h3{
+   padding: 20px 20px 10px; 
+   font-size: 1.3em;
+   color: #111837;
+}
+
+.card-carreira p{
+    padding: 0px 20px 10px;
+    color: #6b7280;
+}
+
+/* Display Grid */
+
+.painel-titulos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.item-titulo{
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px lightcoral;
+}
+
+.item-titulo h3{
+    font-size: 3em;
+    color: #b91c1c;
+    margin-bottom: 10px;
+}
+
+.item-titulo p{
+    color: #4b5536;
+    font-weight: 700;
+}
+
+/* Tela de Tablet */
+@media screen and (max-width: 1000px){
+    .hollow{
+        grid-template-columns: 1fr;
+    }
+    .painel-titulos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-inlineblock{
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tela de Celular */
+
+@media screen and (max-width:600px){
+    /* Altera a navbar */
+    .nagecacao{
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 0;
+    }
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* altera elemento no site */
+    .painel-titulos, .rodape-grid{
+        grid-template-columns: 1fr;
+    }
+    /* Altera cards azuis */
+
+    .card-inlineblock{
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    /* altera o rodape */
+    .rodape-grid{
+        text-align: center;
+        justify-content: center;
+    }
+
+}
